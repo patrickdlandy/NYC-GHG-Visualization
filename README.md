@@ -14,6 +14,15 @@ To better inform decision-making in response to climate change, cities like New 
 
 This data visualization utilizes the D3 JavaScript Library to display greenhouse gas emission in a "sun-burst" graph, broken down into multiple layers of categorization (such as source category and fuel type).
 
+# Wireframes
+
+The app will consist of a single page with an interactive "Sun-Burst" plot in the center. The upper left will have my name and links to my personal pages. The upper right will have key metrics with labels and a drop-down menu for year.
+
+If implemented, the bonus feature bar chart animation will be shown below the "Sun-Burst" plot.
+
+Wireframe link: https://wireframe.cc/36Ilrd
+
+
 # Functionality and MVP Features
 
 * Displays "Sun-Burst" of 2017 NYC Greenhouse Gas Inventory (most recent dataset year) with the following layers of heirarchy, from broadest to most specific:
