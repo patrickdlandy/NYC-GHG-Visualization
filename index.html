@@ -6,9 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./dist/main.css">
     <script src="./dist/main.js"></script>
-    <title>Document</title>
+    <script src="https://d3js.org/d3.v4.js" charset="utf-8"></script>
+    <title>NYC GHG Visualization</title>
+    <!-- Load D3 Library here. -->
 </head>
 <body>
+    <!-- Page elements and content go here. -->
+    <!-- old svg -->
+
+    <!--
+    <svg width="160" height="180">
+        <rect x="30" width="20" height="40" fill="steelblue"></rect>
+        <rect x="55" width="20" height="90" fill="steelblue"></rect>
+        <rect x="80" width="20" height="30" fill="steelblue"></rect>
+        <rect x="105" width="20" height="60" fill="steelblue"></rect>
+    </svg>
+    -->
+
+    <!-- new svg -->
+    <svg width="160" height="180">
+        <rect x="30" width="20" fill="steelblue"></rect>
+        <rect x="55" width="20" fill="steelblue"></rect>
+        <rect x="80" width="20" fill="steelblue"></rect>
+        <rect x="105" width="20" fill="steelblue"></rect>
+    </svg>
+
     
+    <script>
+
+        //D3 Code goes here. SCRIMBA
+
+        var ratData = [ 50, 90, 30, 60 ];
+
+        d3.selectAll( "rect" )
+            .data( ratData )
+            .attr( "height", function(d) {
+                console.log(d);
+                return d;
+            } );
+
+    </script>
 </body>
 </html>
