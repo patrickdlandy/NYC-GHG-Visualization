@@ -16,7 +16,7 @@ This data visualization utilizes the D3 JavaScript Library to display greenhouse
 
 # Wireframes
 
-The app will consist of a single page with an interactive "Sun-Burst" plot in the center. The upper left will have my name and links to my personal pages. The upper right will have key metrics with labels and a drop-down menu for year.
+The app will consist of a single page with an interactive "Sun-Burst" plot in the center. The upper left will have the page title and the lower right will have my name and links to my personal pages. The upper right will have key metrics with labels and a slider bar or dropdown for year.
 
 If implemented, the bonus feature bar chart animation will be shown below the "Sun-Burst" plot.
 
