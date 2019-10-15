@@ -5,46 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./dist/main.css">
+    <!-- <link rel="stylesheet" href="./src/styles/index.scss"> -->
     <script src="./dist/main.js"></script>
-    <script src="https://d3js.org/d3.v4.js" charset="utf-8"></script>
     <title>NYC GHG Visualization</title>
     <!-- Load D3 Library here. -->
+    <!-- <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script> -->
+
 </head>
 <body>
-    <!-- Page elements and content go here. -->
-    <!-- old svg -->
-
-    <!--
-    <svg width="160" height="180">
-        <rect x="30" width="20" height="40" fill="steelblue"></rect>
-        <rect x="55" width="20" height="90" fill="steelblue"></rect>
-        <rect x="80" width="20" height="30" fill="steelblue"></rect>
-        <rect x="105" width="20" height="60" fill="steelblue"></rect>
-    </svg>
-    -->
-
-    <!-- new svg -->
-    <svg width="160" height="180">
-        <rect x="30" width="20" fill="steelblue"></rect>
-        <rect x="55" width="20" fill="steelblue"></rect>
-        <rect x="80" width="20" fill="steelblue"></rect>
-        <rect x="105" width="20" fill="steelblue"></rect>
-    </svg>
-
-    
+    <h1>Operating System Market Share Worldwide</h1>
+    <svg class="pie-chart"></svg>
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <script src="./src/index.js"></script>
     <script>
 
-        //D3 Code goes here. SCRIMBA
+        //everything is bundled into main.js by webpack and we just include a link to "main"
 
-        var ratData = [ 50, 90, 30, 60 ];
+        //D3 Code goes here. 
 
-        d3.selectAll( "rect" )
-            .data( ratData )
-            .attr( "height", function(d) {
-                console.log(d);
-                return d;
-            } );
+        var data = [
+            {"platform": "Android", "percentage" : 40.11},
+            {"platform": "Windows", "percentage" : 36.69},
+            {"platform": "iOS", "percentage": 13.06}
+        ];
 
+        var svgWidth = 500, svgHeight = 300, radius = Math.min(svgWidth, svgHeight) / 2;
+        var svg = d3.select('svg')
+            .attr("width", svgWidth)
+            .attr("height", svgHeight);
+
+        //Create group element to hold pie chart
+        var g = svg.append("g")
+            .attr("transform", "translate(" + radius + "," + radius + ")");
+
+        var color = d3.scaleOrdinal(d3.schemeCategory10);
+
+        var pie = d3.pie().value(function(d) {
+            return d.percentage;
+        });
+
+        var path = d3.arc()
+            .outerRadius(radius)
+            .innerRadius(radius * 1 / 3);
+
+        var arc = g.selectAll("arc")
+            .data(pie(data))
+            .enter()
+            .append("g");
+
+        arc.append("path")
+            .attr("d", path)
+            .attr("fill", function(d) {
+                return color(d.data.percentage);
+            });
+
+        var label = d3.arc()
+            .outerRadius(radius)
+            .innerRadius(0);
+
+        arc.append("text")
+            .attr("transform", function(d) {
+                return "translate(" + label.centroid(d) + ")";
+            })
+            .attr("text-anchor", "middle")
+            .text(function(d) { return d.data.platform+":"+d.data.percentage+"%"; });
+
+       
     </script>
 </body>
 </html>

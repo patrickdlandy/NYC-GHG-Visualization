@@ -1,0 +1,113 @@
+{"GHG Inventory":{
+    "CY 2005":{
+        "Stationary Energy":{
+            "Commercial and Institutional":{
+                "#2 fuel oil":"855215",
+                "#4 fuel oil":"153274",
+                "#6 fuel oil":"270277",
+                "Biofuel":"1",
+                "Electricity":"11253009",
+                "Natural gas":"3039660",
+                "Steam":"1239372"
+                },
+            "Fugitive":{
+                "Fugitive CH4":"207589"
+                },
+            "Manufacturing and Construction":{
+                "#2 fuel oil":"196673",
+                "#4 fuel oil":"32943",
+                "#6 fuel oil":"20819",
+                "Biofuel":"0",
+                "Electricity":"3767250",
+                "Natural gas":"910089",
+                "Steam":"371812"
+                },
+            "Residential":{
+                "#2 fuel oil":"1509205",
+                "#4 fuel oil":"858782",
+                "#6 fuel oil":"2202564",
+                "Biofuel":"5",
+                "Electricity":"6079321",
+                "Natural gas":"9088939",
+                "Steam":"332201"
+                }
+            },
+        "Transportation":{
+            "Aviation":{
+                "Jet fuel":"2426"
+                },
+            "Marine Navigation":{
+                "Biofuel":"0",
+                "Gasoline":"0",
+                "Marine diesel":"49962"
+                },
+            "On-Road":{
+                "Buses ":"687896",
+                "Heavy duty trucks ":"1419991",
+                "Medium duty trucks ":"387786",
+                "Passenger cars":"12881945"
+                },
+            "Railways":{
+                "Diesel":"14098",
+                "Electricity":"953856"
+                }
+            },
+        "Waste":{
+            "Biological treatment":{
+                "CH4 and N2O from composting":"4991"
+                },
+            "Landfills":{
+                "CH4":"2021979"
+                },
+            "Wastewater treatment":{
+                "CH4":"163402",
+                "N2O":"85120"
+                }
+            }
+        },
+    "CY 2006":{
+        "Stationary Energy":{
+            "Commercial and Institutional":{
+                "#2 fuel oil":"721117",
+                "#4 fuel oil":"128002",
+                "#6 fuel oil":"228337",
+                "Biofuel":"2",
+                "Electricity":"10254504",
+                "Natural gas":"3014702",
+                "Steam":"990153"
+                },
+            "Fugitive":{"Fugitive CH4":"199919"},
+            "Manufacturing and Construction":{"#2 fuel oil":"165835","#4 fuel oil":"27511","#6 fuel oil":"17589","Biofuel":"0","Electricity":"3086750","Natural gas":"902616","Steam":"297046"},"Residential":{"#2 fuel oil":"1272562","#4 fuel oil":"717181","#6 fuel oil":"1860783","Biofuel":"10","Electricity":"4932938","Natural gas":"8639591","Steam":"263360"}},"Transportation":{"Aviation":{"Jet fuel":"2501"},"Marine Navigation":{"Biofuel":"0","Gasoline":"0","Marine diesel":"47518"},"On-Road":{"Buses ":"653674","Heavy duty trucks ":"1424651","Medium duty trucks ":"388841","Passenger cars":"12834624"},"Railways":{"Diesel":"14348","Electricity":"809111"}},"Waste":{"Biological treatment":{"CH4 and N2O from composting":"6967"},"Landfills":{"CH4":"1758924"},"Wastewater treatment":{"CH4":"170871","N2O":"82940"}}},
+    "CY 2007":{
+        "Stationary Energy":{
+            "Commercial and Institutional":{"#2 fuel oil":"829520","#4 fuel oil":"147839","#6 fuel oil":"283237","Biofuel":"3","Electricity":"10650969","Natural gas":"3195316","Steam":"1035650"},"Fugitive":{"Fugitive CH4":"217632"},"Manufacturing and Construction":{"#2 fuel oil":"190764","#4 fuel oil":"31775","#6 fuel oil":"21818","Biofuel":"1","Electricity":"3199736","Natural gas":"956693","Steam":"310695"},"Residential":{"#2 fuel oil":"1463862","#4 fuel oil":"828331","#6 fuel oil":"2308182","Biofuel":"11","Electricity":"5176210","Natural gas":"9517481","Steam":"270347"}},"Transportation":{"Aviation":{"Jet fuel":"2436"},"Marine Navigation":{"Biofuel":"0","Gasoline":"0","Marine diesel":"32494"},"On-Road":{"Buses ":"719516","Heavy duty trucks ":"1429307","Medium duty trucks ":"389959","Passenger cars":"12786667"},"Railways":{"Diesel":"14348","Electricity":"819766"}},"Waste":{"Biological treatment":{"CH4 and N2O from composting":"4995"},"Landfills":{"CH4":"1734874"},"Wastewater treatment":{"CH4":"304516","N2O":"85474"}}},
+    "CY 2008":{
+        "Stationary Energy":{
+            "Commercial and Institutional":{"#2 fuel oil":"764594","#4 fuel oil":"126333","#6 fuel oil":"247457","Biofuel":"2","Electricity":"8750868","Natural gas":"5531058","Steam":"814252"},"Fugitive":{"Fugitive CH4":"221018"},"Manufacturing and Construction":{"#2 fuel oil":"175833","#4 fuel oil":"27152","#6 fuel oil":"19061","Biofuel":"0","Electricity":"2957720","Natural gas":"593284","Steam":"244276"},"Residential":{"#2 fuel oil":"1349286","#4 fuel oil":"707835","#6 fuel oil":"2016602","Biofuel":"9","Electricity":"4844438","Natural gas":"7758601","Steam":"372781"}},"Transportation":{"Aviation":{"Jet fuel":"2248"},"Marine Navigation":{"Biofuel":"0","Gasoline":"0","Marine diesel":"44911"},"On-Road":{"Buses ":"617620","Heavy duty trucks ":"1433959","Medium duty trucks ":"391142","Passenger cars":"12737992"},"Railways":{"Diesel":"14437","Electricity":"747111"}},"Waste":{"Biological treatment":{"CH4 and N2O from composting":"3545"},"Landfills":{"CH4":"1730869"},"Wastewater treatment":{"CH4":"299658","N2O":"87011"}}},
+    "CY 2009":{
+        "Stationary Energy":{
+            "Commercial and Institutional":{"#2 fuel oil":"854268","#4 fuel oil":"151661","#6 fuel oil":"282479","Biofuel":"4","Electricity":"7428419","Natural gas":"5708259","Steam":"837750"},"Fugitive":{"Fugitive CH4":"220149"},"Manufacturing and Construction":{"#2 fuel oil":"196456","#4 fuel oil":"32596","#6 fuel oil":"21759","Biofuel":"1","Electricity":"2629126","Natural gas":"499671","Steam":"251325"},"Residential":{"#2 fuel oil":"1507534","#4 fuel oil":"849740","#6 fuel oil":"2302006","Biofuel":"14","Electricity":"4530996","Natural gas":"7620632","Steam":"385561"}},"Transportation":{"Aviation":{"Jet fuel":"2113"},"Marine Navigation":{"Biofuel":"0","Gasoline":"0","Marine diesel":"45125"},"On-Road":{"Buses ":"608592","Heavy duty trucks ":"1438606","Medium duty trucks ":"392389","Passenger cars":"12688656"},"Railways":{"Diesel":"13985","Electricity":"718802"}},"Waste":{"Biological treatment":{"CH4 and N2O from composting":"3919"},"Landfills":{"CH4":"1699178"},"Wastewater treatment":{"CH4":"267607","N2O":"87617"}}},
+    "CY 2010":{
+        "Stationary Energy":{
+            "Commercial and Institutional":{"#2 fuel oil":"823320","#4 fuel oil":"149941","#6 fuel oil":"267820","Biofuel":"2","Electricity":"6649543","Natural gas":"4897012","Steam":"744424"},"Fugitive":{"Fugitive CH4":"411536"},"Manufacturing and Construction":{"#2 fuel oil":"189339","#4 fuel oil":"32226","#6 fuel oil":"20630","Biofuel":"0","Electricity":"2343386","Natural gas":"1158830","Steam":"223327"},"Residential":{"#2 fuel oil":"1452921","#4 fuel oil":"840108","#6 fuel oil":"2182548","Biofuel":"9","Electricity":"4290372","Natural gas":"8648642","Steam":"329473"}},"Transportation":{"Aviation":{"Jet fuel":"2227"},"Marine Navigation":{"Biofuel":"0","Gasoline":"0","Marine diesel":"51608"},"On-Road":{"Buses ":"599078","Heavy duty trucks ":"1443249","Medium duty trucks ":"393699","Passenger cars":"12638629"},"Railways":{"Diesel":"13710","Electricity":"585981"}},"Waste":{"Biological treatment":{"CH4 and N2O from composting":"4116"},"Landfills":{"CH4":"1679645"},"Wastewater treatment":{"CH4":"230426","N2O":"83325"}}},
+    "CY 2011":{
+        "Stationary Energy":{
+            "Commercial and Institutional":{"#2 fuel oil":"805766","#4 fuel oil":"145452","#6 fuel oil":"251422","Biofuel":"4","Electricity":"6973279","Natural gas":"5112296","Steam":"708121"},"Fugitive":{"Fugitive CH4":"428340"},"Manufacturing and Construction":{"#2 fuel oil":"185302","#4 fuel oil":"31262","#6 fuel oil":"19367","Biofuel":"1","Electricity":"2504742","Natural gas":"1198391","Steam":"212436"},"Residential":{"#2 fuel oil":"1421942","#4 fuel oil":"814956","#6 fuel oil":"2048916","Biofuel":"15","Electricity":"4520767","Natural gas":"8994243","Steam":"323160"}},"Transportation":{"Aviation":{"Jet fuel":"1836"},"Marine Navigation":{"Biofuel":"0","Gasoline":"0","Marine diesel":"53850"},"On-Road":{"Buses ":"568779","Heavy duty trucks ":"1447887","Medium duty trucks ":"395073","Passenger cars":"12588103"},"Railways":{"Diesel":"14050","Electricity":"591515"}},"Waste":{"Biological treatment":{"CH4 and N2O from composting":"3807"},"Landfills":{"CH4":"1719175"},"Wastewater treatment":{"CH4":"248908","N2O":"82857"}}},
+    "CY 2012":{
+        "Stationary Energy":{
+            "Commercial and Institutional":{"#2 fuel oil":"730188","#4 fuel oil":"144334","#6 fuel oil":"196179","Biofuel":"11","Electricity":"6462973","Natural gas":"4698827","Steam":"509367"},"Fugitive":{"Fugitive CH4":"389429"},"Manufacturing and Construction":{"#2 fuel oil":"167921","#4 fuel oil":"31021","#6 fuel oil":"15112","Biofuel":"2","Electricity":"2395147","Natural gas":"1101903","Steam":"152810"},"Residential":{"#2 fuel oil":"1288570","#4 fuel oil":"808693","#6 fuel oil":"1598721","Biofuel":"45","Electricity":"4282842","Natural gas":"8113867","Steam":"255853"}},"Transportation":{"Aviation":{"Jet fuel":"1557"},"Marine Navigation":{"Biofuel":"0","Gasoline":"0","Marine diesel":"31646"},"On-Road":{"Buses ":"571889","Heavy duty trucks ":"1452522","Medium duty trucks ":"396512","Passenger cars":"12536849"},"Railways":{"Diesel":"12834","Electricity":"583232"}},"Waste":{"Biological treatment":{"CH4 and N2O from composting":"3548"},"Landfills":{"CH4":"1695509"},"Wastewater treatment":{"CH4":"187499","N2O":"77070"}}},
+    "CY 2013":{
+        "Stationary Energy":{
+            "Commercial and Institutional":{"#2 fuel oil":"934987","#4 fuel oil":"172805","#6 fuel oil":"145597","Biofuel":"16","Electricity":"6472566","Natural gas":"5480790","Steam":"597717"},"Fugitive":{"Fugitive CH4":"440767"},"Manufacturing and Construction":{"#2 fuel oil":"215019","#4 fuel oil":"37140","#6 fuel oil":"11215","Biofuel":"3","Electricity":"2402886","Natural gas":"6101884","Steam":"179315"},"Residential":{"#2 fuel oil":"1649980","#4 fuel oil":"968211","#6 fuel oil":"1186511","Biofuel":"65","Electricity":"4219090","Natural gas":"4156596","Steam":"318768"}},"Transportation":{"Aviation":{"Jet fuel":"2071"},"Marine Navigation":{"Biofuel":"0","Gasoline":"0","Marine diesel":"89511"},"On-Road":{"Buses ":"573516","Heavy duty trucks ":"1457151","Medium duty trucks ":"398014","Passenger cars":"12484999"},"Railways":{"Diesel":"14775","Electricity":"596276"}},"Waste":{"Biological treatment":{"CH4 and N2O from composting":"3895"},"Landfills":{"CH4":"1687225"},"Wastewater treatment":{"CH4":"164922","N2O":"76551"}}},
+    "CY 2014":{
+        "Stationary Energy":{
+            "Commercial and Institutional":{"#2 fuel oil":"717215","#4 fuel oil":"105587","#6 fuel oil":"38105","Biofuel":"11","Electricity":"6399736","Natural gas":"5861832","Steam":"605180"},"Fugitive":{"Fugitive CH4":"480624"},"Manufacturing and Construction":{"#2 fuel oil":"164938","#4 fuel oil":"22693","#6 fuel oil":"2935","Biofuel":"2","Electricity":"2365278","Natural gas":"1372611","Steam":"181554"},"Residential":{"#2 fuel oil":"1265676","#4 fuel oil":"591594","#6 fuel oil":"310527","Biofuel":"44","Electricity":"3984838","Natural gas":"9938586","Steam":"322749"}},"Transportation":{"Aviation":{"Jet fuel":"2330"},"Marine Navigation":{"Biofuel":"0","Gasoline":"0","Marine diesel":"52770"},"On-Road":{"Buses ":"580459","Heavy duty trucks ":"1461692","Medium duty trucks ":"399075","Passenger cars":"12431643"},"Railways":{"Diesel":"14811","Electricity":"570346"}},"Waste":{"Biological treatment":{"CH4 and N2O from composting":"5532"},"Landfills":{"CH4":"1702001"},"Wastewater treatment":{"CH4":"142468","N2O":"76133"}}},
+    "CY 2015":{
+        "Stationary Energy":{
+            "Commercial and Institutional":{"#2 fuel oil":"935210","#4 fuel oil":"185295","#6 fuel oil":"17698","Biofuel":"14","Electricity":"6250500","Natural gas":"5748157","Steam":"569870"},"Fugitive":{"Fugitive CH4":"472886"},"Manufacturing and Construction":{"#2 fuel oil":"215070","#4 fuel oil":"39825","#6 fuel oil":"1363","Biofuel":"3","Electricity":"2320895","Natural gas":"1369385","Steam":"170961"},"Residential":{"#2 fuel oil":"1650374","#4 fuel oil":"1038192","#6 fuel oil":"144226","Biofuel":"57","Electricity":"4035680","Natural gas":"9778974","Steam":"286277"}},"Transportation":{"Aviation":{"Jet fuel":"2643"},"Marine Navigation":{"Biofuel":"0","Gasoline":"0","Marine diesel":"55735"},"On-Road":{"Buses ":"561936","Heavy duty trucks ":"1466398","Medium duty trucks ":"401210","Passenger cars":"12379304"},"Railways":{"Diesel":"14761","Electricity":"556076"}},"Waste":{"Biological treatment":{"CH4 and N2O from composting":"6971"},"Landfills":{"CH4":"1680420"},"Wastewater treatment":{"CH4":"152973","N2O":"74890"}}},
+    "CY 2016":{
+        "Stationary Energy":{
+            "Commercial and Institutional":{"#2 fuel oil":"714888","#4 fuel oil":"135631","#6 fuel oil":"2370","Biofuel":"12","Electricity":"6288195","Natural gas":"5589772","Steam":"481522"},"Fugitive":{"Fugitive CH4":"488415"},"Manufacturing and Construction":{"#2 fuel oil":"164402","#4 fuel oil":"29151","#6 fuel oil":"183","Biofuel":"2","Electricity":"2345110","Natural gas":"1369580","Steam":"144456"},"Residential":{"#2 fuel oil":"1261569","#4 fuel oil":"759929","#6 fuel oil":"19314","Biofuel":"48","Electricity":"4023713","Natural gas":"10492098","Steam":"270734"}},"Transportation":{"Aviation":{"Jet fuel":"2533"},"Marine Navigation":{"Biofuel":"0","Gasoline":"0","Marine diesel":"86108"},"On-Road":{"Buses ":"548489","Heavy duty trucks ":"1470944","Medium duty trucks ":"402454","Passenger cars":"12417699"},"Railways":{"Diesel":"13615","Electricity":"554345"}},"Waste":{"Biological treatment":{"CH4 and N2O from composting":"8293"},"Landfills":{"CH4":"1690923"},"Wastewater treatment":{"CH4":"103514","N2O":"70514"}}},
+    "CY 2017":{
+        "Stationary Energy":{
+            "Commercial and Institutional":{"#2 fuel oil":"617758","#4 fuel oil":"145400","#6 fuel oil":"1310","Biofuel":"19","Electricity":"5806863","Natural gas":"6161253","Steam":"430828"},"Fugitive":{"Fugitive CH4":"493695"},"Manufacturing and Construction":{"#2 fuel oil":"142066","#4 fuel oil":"31250","#6 fuel oil":"101","Biofuel":"3","Electricity":"2127938","Natural gas":"1454160","Steam":"129248"},"Residential":{"#2 fuel oil":"1090164","#4 fuel oil":"814663","#6 fuel oil":"10678","Biofuel":"76","Electricity":"3672168","Natural gas":"10024575","Steam":"250272"}},"Transportation":{"Aviation":{"Jet fuel":"2501"},"Marine Navigation":{"Biofuel":"0","Gasoline":"0","Marine diesel":"48593"},"On-Road":{"Buses ":"532636","Heavy duty trucks ":"1475504","Medium duty trucks ":"403701","Passenger cars":"12456065"},"Railways":{"Diesel":"14620","Electricity":"500831"}},"Waste":{"Biological treatment":{"CH4 and N2O from composting":"10814"},"Landfills":{"CH4":"1695239"},"Wastewater treatment":{"CH4":"73756","N2O":"74177"}}}}}
