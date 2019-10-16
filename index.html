@@ -92,6 +92,26 @@
                         return (d.dx > 0.005);
                     });
 
+                var uniqueNames = (function(a) {
+                    var output = [];
+                    a.forEach(function(d) {
+                        if (output.indexOf(d.name) === -1 ) {
+                            output.push(d.name);
+                        }
+                    });
+                    return output;
+                })(nodes);
+
+                // set domain of colors scale based on data
+                colors.domain(uniqueNames);
+
+                //draw legend here later
+
+                var path = vis.data([data]).selectAll("path")
+                    .data(nodes)
+                    .enter()
+                    .append("path")
+
             }
 
             createVisualization(data);
