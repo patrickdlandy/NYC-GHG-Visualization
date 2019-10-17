@@ -250,4 +250,18 @@ Check Scrimba for D3 tutorials
                 .text();
 
             
+});
+
+d3.select("#chart")
+                .selectAll("p")
+                //Data is specified as an array of values, and each value is passed
+                //as the first argument (d) to selection function
+                .data([4, 8, 15, 16, 23, 42])
+                .enter().append("p")
+                //.enter creates new nodes for incoming data
+                    .text(function(d) {
+                        return "I'm number " + d + "!";
+                    })
+                    .style("font", "17px sans-serif")
+                    .style("color", "purple");
           
