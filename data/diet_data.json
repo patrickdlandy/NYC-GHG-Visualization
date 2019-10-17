@@ -1,0 +1,219 @@
+{
+  "name": "CY 2017",
+  "children": [
+    {
+      "name": "Stationary Energy",
+      "children": [
+        {
+          "name": "Commercial and Institutional",
+          "children": [
+            {
+              "name": "#2 fuel oil",
+              "value": "617758"
+            },
+            {
+              "name": "#4 fuel oil",
+              "value": "145400"
+            },
+            {
+              "name": "#6 fuel oil",
+              "value": "1310"
+            },
+            {
+              "name": "Biofuel",
+              "value": "19"
+            },
+            {
+              "name": "Electricity",
+              "value": "5806863"
+            },
+            {
+              "name": "Natural gas",
+              "value": "6161253"
+            },
+            {
+              "name": "Steam",
+              "value": "430828"
+            }
+          ]
+        },
+        {
+          "name": "Fugitive",
+          "children": [
+            {
+              "name": "Fugitive CH4",
+              "value": "493695"
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing and Construction",
+          "children": [
+            {
+              "name": "#2 fuel oil",
+              "value": "142066"
+            },
+            {
+              "name": "#4 fuel oil",
+              "value": "31250"
+            },
+            {
+              "name": "#6 fuel oil",
+              "value": "101"
+            },
+            {
+              "name": "Biofuel",
+              "value": "3"
+            },
+            {
+              "name": "Electricity",
+              "value": "2127938"
+            },
+            {
+              "name": "Natural gas",
+              "value": "1454160"
+            },
+            {
+              "name": "Steam",
+              "value": "129248"
+            }
+          ]
+        },
+        {
+          "name": "Residential",
+          "children": [
+            {
+              "name": "#2 fuel oil",
+              "value": "1090164"
+            },
+            {
+              "name": "#4 fuel oil",
+              "value": "814663"
+            },
+            {
+              "name": "#6 fuel oil",
+              "value": "10678"
+            },
+            {
+              "name": "Biofuel",
+              "value": "76"
+            },
+            {
+              "name": "Electricity",
+              "value": "3672168"
+            },
+            {
+              "name": "Natural gas",
+              "value": "10024575"
+            },
+            {
+              "name": "Steam",
+              "value": "250272"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Transportation",
+      "children": [
+        {
+          "name": "Aviation",
+          "children": [
+            {
+              "name": "Jet fuel",
+              "value": "2501"
+            }
+          ]
+        },
+        {
+          "name": "Marine Navigation",
+          "children": [
+            {
+              "name": "Biofuel",
+              "value": "0"
+            },
+            {
+              "name": "Gasoline",
+              "value": "0"
+            },
+            {
+              "name": "Marine diesel",
+              "value": "48593"
+            }
+          ]
+        },
+        {
+          "name": "On-Road",
+          "children": [
+            {
+              "name": "Buses ",
+              "value": "532636"
+            },
+            {
+              "name": "Heavy duty trucks ",
+              "value": "1475504"
+            },
+            {
+              "name": "Medium duty trucks ",
+              "value": "403701"
+            },
+            {
+              "name": "Passenger cars",
+              "value": "12456065"
+            }
+          ]
+        },
+        {
+          "name": "Railways",
+          "children": [
+            {
+              "name": "Diesel",
+              "value": "14620"
+            },
+            {
+              "name": "Electricity",
+              "value": "500831"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Waste",
+      "children": [
+        {
+          "name": "Biological treatment",
+          "children": [
+            {
+              "name": "CH4 and N2O from composting",
+              "value": "10814"
+            }
+          ]
+        },
+        {
+          "name": "Landfills",
+          "children": [
+            {
+              "name": "CH4",
+              "value": "1695239"
+            }
+          ]
+        },
+        {
+          "name": "Wastewater treatment",
+          "children": [
+            {
+              "name": "CH4",
+              "value": "73756"
+            },
+            {
+              "name": "N2O",
+              "value": "74177"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

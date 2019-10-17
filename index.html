@@ -9,9 +9,6 @@
     <title>NYC GHG Visualization</title>
     <!-- Load D3 Library here. -->
     <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
-    <!-- <script src="https://d3js.org/d3-color.v1.min.js"></script>
-    <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
-    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script> -->
 
 </head>
 <body>
@@ -24,9 +21,9 @@
         //My initial D3 Code goes here:
 
         //I need to define some constants for dimensions.
-        const width = 900;
-        const height = 900;
-        const radius = width / 6;
+        const width = 932;
+        const height = 932;
+        const radius = width / 8;
 
         //I need to make an arc function and a partition function to be called later.
 
@@ -58,12 +55,13 @@
         const partition = function(data) {
             const root = d3.hierarchy(data)
                     .sum(function(d) {
-                        return d.size;
+                        console.log(d);
+                        return d.value;
                     })
                     .sort(function(a, b) {
                         return(b.value - a.value);
                     })
-                    console.log(root);
+                    // console.log(root);
             return d3.partition()
                     .size([2* Math.PI, root.height + 1])
                     (root);
@@ -76,12 +74,12 @@
 
         //I already know how to get my json data into an object in this function:
 
-        var dataset = d3.json('/data/data.json').then( function(data) {
+        var dataset = d3.json('/data/diet_data.json').then( function(data) {
             return data;
         });
 
         dataset.then(function(data) {
-            console.log(data)
+            // console.log(data)
             //All code to do visualization goes inside of this callback
 
             //color
