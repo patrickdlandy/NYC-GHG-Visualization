@@ -35,10 +35,12 @@ const arc = d3.arc()
     return Math.max(d.y0 * radius, d.y1 * radius - 1);
   });
 
-//partition
+//partition function
+
 const partition = function (data) {
   const root = d3.hierarchy(data)
     .sum(function (d) {
+      //this only sums the leaves, which have a value attribute
       console.log(d);
       return d.value;
     })
@@ -52,23 +54,16 @@ const partition = function (data) {
 }
 
 
+//I get my json data into an object in this function:
 
-
-
-
-//I already know how to get my json data into an object in this function:
-
-var dataset = d3.json('/data/diet_data.json').then(function (data) {
+var dataset = d3.json('/data/data.json').then(function (data) {
   return data;
 });
 
 dataset.then(function (data) {
   // console.log(data)
-  //All code to do visualization goes inside of this callback
 
-  //color
-  const color = d3.scaleOrdinal().range(d3.quantize(d3.interpolateRainbow,
-    data.children.length + 1));
+  //All code to do visualization goes inside of this callback
 
   //generate root 
   const root = partition(data);
@@ -79,6 +74,21 @@ dataset.then(function (data) {
     d.current = d;
   });
   //console.log(root.descendants());
+
+  //color
+
+  const color = d3.scaleOrdinal().range(d3.quantize(d3.interpolateRainbow,
+    data.children.length + 1));
+
+  //refactoring the color method
+
+  console.log(names);
+
+  //I want the color to be interpolated using a list of unique names.
+
+  //Here I will make a list of unique names:
+
+  const names = [];
 
 
   const svg = d3.select("#chart")
