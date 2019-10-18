@@ -56,7 +56,7 @@ const partition = function (data) {
 
 //I get my json data into an object in this function:
 
-var dataset = d3.json('/data/diet_data.json').then(function (data) {
+var dataset = d3.json('/data/data.json').then(function (data) {
   return data;
 });
 
@@ -75,33 +75,52 @@ dataset.then(function (data) {
   });
   //console.log(root.descendants());
 
-  //color
+  //color (OLD)
 
   // const color = d3.scaleOrdinal().range(d3.quantize(d3.interpolateRainbow,
   //   data.children.length + 1));
 
+  // const color = d3.scaleOrdinal().range(d3.quantize(d3.interpolateRainbow,
+  //   names.length));
+
   //refactoring the color method
 
-  //I want the color to be interpolated using a list of unique names.
-
-  //Here I will make a list of unique names:
-
   const names = [];
+  const heights = [];
+  const names_by_height = {};
 
   root.descendants().forEach(function(d) {
+    if (heights.indexOf(d.height) === -1 ) {
+      heights.push(d.height);
+      names_by_height[d.height] = [];
+    }
     if (names.indexOf(d.data.name) === -1) {
       names.push(d.data.name);
+      names_by_height[d.height].push(d.data.name);
     }
   });
 
-  const color = d3.scaleOrdinal().range(d3.quantize(d3.interpolateRainbow,
-    names.length));
+  // console.log(names);
+  // console.log(heights);
+  // console.log(names_by_height);
 
-  console.log(names);
+  //Interpolate the whole rainbow at each height in the heirarchy
 
-  //I want to interpolate the whole rainbow at each height in the heirarchy
+  const colors = {};
 
-  //I also want 
+  heights.forEach( function(h) {
+    colors[h] = d3.scaleOrdinal().range(d3.quantize(d3.interpolateRainbow,
+      names_by_height[h].length + 1));
+  });
+
+  //I also want to vary opacity by height
+
+  const opacity_by_height = {}
+  const opacity_min = .3;
+  const opacity_max = 1;
+
+
+
 
 
   const svg = d3.select("#chart")
@@ -118,8 +137,8 @@ dataset.then(function (data) {
     .join("path")
     .attr("fill", function (d) {
       // while (d.depth > 1) { d = d.parent; }
-      console.log(d.data.name);
-      return color(names.indexOf(d.data.name));
+      // console.log(d.height);
+      return colors[d.height](names_by_height[d.height].indexOf(d.data.name));
     })
     .attr("fill-opacity", 1)
     .attr("d", function (d) {
