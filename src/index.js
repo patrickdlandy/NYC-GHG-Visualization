@@ -41,7 +41,7 @@ const partition = function (data) {
   const root = d3.hierarchy(data)
     .sum(function (d) {
       //this only sums the leaves, which have a value attribute
-      console.log(d);
+      // console.log(d);
       return d.value;
     })
     .sort(function (a, b) {
@@ -56,7 +56,11 @@ const partition = function (data) {
 
 //I get my json data into an object in this function:
 
+<<<<<<< HEAD
 var dataset = d3.json('../data/diet_data.json').then(function (data) {
+=======
+var dataset = d3.json('./data/diet_data.json').then(function (data) {
+>>>>>>> master
   return data;
 });
 
