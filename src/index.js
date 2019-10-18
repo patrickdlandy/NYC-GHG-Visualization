@@ -56,7 +56,7 @@ const partition = function (data) {
 
 //I get my json data into an object in this function:
 
-var dataset = d3.json('/data/data.json').then(function (data) {
+var dataset = d3.json('/data/diet_data.json').then(function (data) {
   return data;
 });
 
@@ -119,9 +119,9 @@ dataset.then(function (data) {
   const opacity_min = .3;
   const opacity_max = 1;
 
+  heights.forEach(function(h) {
 
-
-
+  });
 
   const svg = d3.select("#chart")
     .style("width", "100%")
