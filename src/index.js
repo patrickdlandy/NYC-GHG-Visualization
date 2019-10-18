@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //My D3 Code here:
 
+const format = d3.format(",d");
+
 //some constants for dimensions:
 const width = 932;
 const height = 932;
@@ -116,10 +118,17 @@ dataset.then(function (data) {
   //I also want to vary opacity by height
 
   const opacity_by_height = {}
-  const opacity_min = .3;
+  const opacity_min = .4;
   const opacity_max = 1;
+  const steps = heights.length;
 
-  heights.forEach(function(h) {
+  // const opacities = d3.interpolateNumber(opacity_max, opacity_min);
+  
+  const opacities = d3.scaleOrdinal()
+      .domain(heights)
+      .range(d3.range(opacity_max, opacity_min, -1 * (opacity_max - opacity_min)/steps));
+
+  heights.forEach(function(h, idx) {
 
   });
 
@@ -140,11 +149,31 @@ dataset.then(function (data) {
       // console.log(d.height);
       return colors[d.height](names_by_height[d.height].indexOf(d.data.name));
     })
-    .attr("fill-opacity", 1)
+    .attr("fill-opacity", function(d){
+      return opacities(d.height);
+    })
     .attr("d", function (d) {
       return arc(d.current);
     });
 
+  path.append("title")
+    .text(function(d) {
+      return `${d.ancestors().map(function(d){
+        return d.data.name;
+      }).reverse()
+      .join("/")}\n${format(d.value)}`;
+    });
+
+  const label = g.append("g")
+    .attr("pointer-events", "none")
+    .attr("text-anchor")
+    .selectAll("text")
+    .data(root.descendants().slice(1))
+    .join("text")
+    .attr("fill-opacity", 1)
+    .text(function(d) {
+      return d.data.name;
+    });
 
   //
 
