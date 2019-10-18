@@ -49,7 +49,7 @@ const partition = function (data) {
     .sort(function (a, b) {
       return (b.value - a.value);
     })
-  // console.log(root);
+  console.log(root.data.name);
   return d3.partition()
     .size([2 * Math.PI, root.height + 1])
     (root);
@@ -168,18 +168,16 @@ dataset.then(function (data) {
       .join("/")}\n${format(d.value)}`;
     });
 
-  // const label = g.append("g")
-  //   .attr("pointer-events", "none")
-  //   .attr("text-anchor")
-  //   .selectAll("text")
-  //   .data(root.descendants().slice(1))
-  //   .join("text")
-  //   .attr("fill-opacity", 1)
-  //   .text(function(d) {
-  //     return d.data.name;
-  //   });
+  const chartlabel = g.append("text")
+    // .attr("pointer-events", "none")
+    .attr("text-anchor", "middle")
+    // .selectAll("text")
+    // .data(root)
+    // .join("text")
+    .attr("fill-opacity", 1)
+    .text(root.data.name);
 
-  //
+  
 
 });
     
