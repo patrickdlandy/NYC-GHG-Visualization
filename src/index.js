@@ -130,7 +130,7 @@ dataset.then(function (data) {
 
 
   const svg = d3.select("#chart")
-    .style("width", "100%")
+    // .style("width", "100%")
     .style("height", "auto")
     .style("font", "10px sans-serif");
 
@@ -143,8 +143,8 @@ dataset.then(function (data) {
     .join("path")
     .attr("fill", function (d) {
       // while (d.depth > 1) { d = d.parent; }
-      console.log(d.data);
-      console.log(d.height);
+      // console.log(d.data);
+      // console.log(d.height);
       return colors[d.height](names_by_height[d.height].indexOf(d.data.name));
     })
     .attr("fill-opacity", function(d) {
