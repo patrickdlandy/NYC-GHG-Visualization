@@ -77,18 +77,31 @@ dataset.then(function (data) {
 
   //color
 
-  const color = d3.scaleOrdinal().range(d3.quantize(d3.interpolateRainbow,
-    data.children.length + 1));
+  // const color = d3.scaleOrdinal().range(d3.quantize(d3.interpolateRainbow,
+  //   data.children.length + 1));
 
   //refactoring the color method
-
-  console.log(names);
 
   //I want the color to be interpolated using a list of unique names.
 
   //Here I will make a list of unique names:
 
   const names = [];
+
+  root.descendants().forEach(function(d) {
+    if (names.indexOf(d.data.name) === -1) {
+      names.push(d.data.name);
+    }
+  });
+
+  const color = d3.scaleOrdinal().range(d3.quantize(d3.interpolateRainbow,
+    names.length));
+
+  console.log(names);
+
+  //I want to interpolate the whole rainbow at each height in the heirarchy
+
+  //I also want 
 
 
   const svg = d3.select("#chart")
@@ -104,8 +117,9 @@ dataset.then(function (data) {
     .data(root.descendants())
     .join("path")
     .attr("fill", function (d) {
-      while (d.depth > 1) { d = d.parent; }
-      return color(d.data.name);
+      // while (d.depth > 1) { d = d.parent; }
+      console.log(d.data.name);
+      return color(names.indexOf(d.data.name));
     })
     .attr("fill-opacity", 1)
     .attr("d", function (d) {
