@@ -264,4 +264,12 @@ d3.select("#chart")
                     })
                     .style("font", "17px sans-serif")
                     .style("color", "purple");
+
+
+To do:
+
+-Add label in center
+-Remove coloration in center X
+-Reset opacity to exclude center
+-Set up CSS
           

@@ -56,3 +56,7 @@ Wednesday, October 16th: continue D3 Tutorials, begin coding MVP 1 (2017 Sun-bur
 Thursday, October 17th: continue MVP 1, begin MVP 2 (hover % effect)
 Friday, October 18th: complete MVP 2, begin MVP 3 (time dropdown)
 Weekend, October 19th-20th: Complete MVP 3 and do bonus features if time allows
+
+# Background Image Credit
+
+CC0 Public Domain License, Photo by George Hodan

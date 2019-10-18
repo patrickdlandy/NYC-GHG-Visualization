@@ -1,7 +1,7 @@
 
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
 
-})
+// })
 
 //everything is bundled into main.js by webpack and we just include a link to "main"
 
@@ -128,9 +128,6 @@ dataset.then(function (data) {
       .domain(heights)
       .range(d3.range(opacity_max, opacity_min, -1 * (opacity_max - opacity_min)/steps));
 
-  heights.forEach(function(h, idx) {
-
-  });
 
   const svg = d3.select("#chart")
     .style("width", "100%")
@@ -146,15 +143,22 @@ dataset.then(function (data) {
     .join("path")
     .attr("fill", function (d) {
       // while (d.depth > 1) { d = d.parent; }
-      // console.log(d.height);
+      console.log(d.data);
+      console.log(d.height);
       return colors[d.height](names_by_height[d.height].indexOf(d.data.name));
     })
-    .attr("fill-opacity", function(d){
-      return opacities(d.height);
+    .attr("fill-opacity", function(d) {
+      if (d.height === Math.max(...heights)) {
+        return 0;
+      } else { 
+        return opacities(d.height)
+      };
     })
     .attr("d", function (d) {
       return arc(d.current);
     });
+
+  //Add title elements to each path
 
   path.append("title")
     .text(function(d) {
@@ -164,16 +168,16 @@ dataset.then(function (data) {
       .join("/")}\n${format(d.value)}`;
     });
 
-  const label = g.append("g")
-    .attr("pointer-events", "none")
-    .attr("text-anchor")
-    .selectAll("text")
-    .data(root.descendants().slice(1))
-    .join("text")
-    .attr("fill-opacity", 1)
-    .text(function(d) {
-      return d.data.name;
-    });
+  // const label = g.append("g")
+  //   .attr("pointer-events", "none")
+  //   .attr("text-anchor")
+  //   .selectAll("text")
+  //   .data(root.descendants().slice(1))
+  //   .join("text")
+  //   .attr("fill-opacity", 1)
+  //   .text(function(d) {
+  //     return d.data.name;
+  //   });
 
   //
 
