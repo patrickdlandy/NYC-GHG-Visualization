@@ -58,7 +58,7 @@ const partition = function (data) {
 
 //I get my json data into an object in this function:
 
-var dataset = d3.json('./data/diet_data.json').then(function (data) {
+var dataset = d3.json('./data/data.json').then(function (data) {
   return data;
 });
 
