@@ -49,7 +49,7 @@ const partition = function (data) {
     .sort(function (a, b) {
       return (b.value - a.value);
     })
-  console.log(root.data.name);
+  // console.log(root.data.name);
   return d3.partition()
     .size([2 * Math.PI, root.height + 1])
     (root);
@@ -58,7 +58,7 @@ const partition = function (data) {
 
 //I get my json data into an object in this function:
 
-var dataset = d3.json('./data/data.json').then(function (data) {
+var dataset = d3.json('./data/diet_data.json').then(function (data) {
   return data;
 });
 
@@ -69,11 +69,12 @@ dataset.then(function (data) {
 
   //generate root 
   const root = partition(data);
-  //console.log(root.descendants());
+  console.log(root);
 
   //set current attribute
   root.each(function (d) {
     d.current = d;
+    d.fraction = d.value / root.value;
   });
   //console.log(root.descendants());
 
@@ -162,20 +163,27 @@ dataset.then(function (data) {
 
   path.append("title")
     .text(function(d) {
-      return `${d.ancestors().map(function(d){
-        return d.data.name;
-      }).reverse()
-      .join("/")}\n${format(d.value)}`;
+      return `${
+        d.ancestors()
+        .map(function(d) {
+          return d.data.name;
+        })
+        .reverse()
+        .slice(1)
+        .join(": ")
+        } \n ${
+        format(d.value)
+        } tCO2e \n ${
+        d3.format(".1%")(d.fraction)
+        }`;
     });
 
   const chartlabel = g.append("text")
-    // .attr("pointer-events", "none")
     .attr("text-anchor", "middle")
-    // .selectAll("text")
-    // .data(root)
-    // .join("text")
     .attr("fill-opacity", 1)
-    .text(root.data.name);
+    .text(function() {
+      return `${root.data.name} \n ${format(root.value)} tCO2e`;
+      });
 
   
 
