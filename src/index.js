@@ -49,7 +49,7 @@ const partition = function (data) {
     .sort(function (a, b) {
       return (b.value - a.value);
     })
-  // console.log(root);
+  // console.log(root.data.name);
   return d3.partition()
     .size([2 * Math.PI, root.height + 1])
     (root);
@@ -69,11 +69,12 @@ dataset.then(function (data) {
 
   //generate root 
   const root = partition(data);
-  //console.log(root.descendants());
+  console.log(root);
 
   //set current attribute
   root.each(function (d) {
     d.current = d;
+    d.fraction = d.value / root.value;
   });
   //console.log(root.descendants());
 
@@ -162,24 +163,29 @@ dataset.then(function (data) {
 
   path.append("title")
     .text(function(d) {
-      return `${d.ancestors().map(function(d){
-        return d.data.name;
-      }).reverse()
-      .join("/")}\n${format(d.value)}`;
+      return `${
+        d.ancestors()
+        .map(function(d) {
+          return d.data.name;
+        })
+        .reverse()
+        .slice(1)
+        .join(": ")
+        } \n ${
+        format(d.value)
+        } tCO2e \n ${
+        d3.format(".1%")(d.fraction)
+        }`;
     });
 
-  // const label = g.append("g")
-  //   .attr("pointer-events", "none")
-  //   .attr("text-anchor")
-  //   .selectAll("text")
-  //   .data(root.descendants().slice(1))
-  //   .join("text")
-  //   .attr("fill-opacity", 1)
-  //   .text(function(d) {
-  //     return d.data.name;
-  //   });
+  const chartlabel = g.append("text")
+    .attr("text-anchor", "middle")
+    .attr("fill-opacity", 1)
+    .text(function() {
+      return `${root.data.name} \n ${format(root.value)} tCO2e`;
+      });
 
-  //
+  
 
 });
     
