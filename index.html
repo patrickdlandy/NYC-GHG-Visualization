@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./dist/main.css">
     <title>NYC GHG Visualization</title>
     <!-- Load D3 Library here. -->
     <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
     <script src="./dist/main.js"></script>
+    <link rel="stylesheet" href="./dist/main.css">
 </head>
 <body>
-    <h1>NYC Greenhouse Gas Inventory</h1>
+    <nav>
+
+    </nav>
+    <h1>New York City's Annual Greenhouse Gas Emissions</h1>
     <!-- <body background="./assets/new-york-1462211672M0J.jpg" alt="New York City">
     </body> -->
-        <main>
-            <svg id="chart" width="932" height="932" viewBox="0 0 932 932"></svg>
-        </main>
-
+    <main>
+        <svg id="chart" width="932" height="932" viewBox="0 0 932 932"></svg>
+    </main>
+    <footer class="footer-container">
+        <span>
+            Data shown from 
+            <a href="https://nyc-ghg-inventory.cusp.nyu.edu/#data">New York City Greenhouse Gas Inventory</a>
+        </span>
+    </footer>
 </body>
 </html>
