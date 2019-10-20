@@ -6,6 +6,8 @@ App Academy NYC August 12th Cohort Javascript Project
 
 Patrick Landy
 
+Live Link: https://patrickdlandy.github.io/NYC-GHG-Visualization/
+
 # Background and Overview
 
 Climate change is an extremely pressing problem that calls for aggressive, data driven policy action. In order to reduce severe and often life-threatening risks to marginalized people, global greenhouse gas emissions must be reduced drastically in the near-term.
