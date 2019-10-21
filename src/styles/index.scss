@@ -14,11 +14,22 @@ text {
 	font-family: "Open Sans", sans-serif;
 	font-size: 24px;
 	font-weight: 300;
-	padding: 8px;
+	padding: 16px;
+}
+
+.nav-element-right {
+	font-family: "Open Sans", sans-serif;
+	font-size: 24px;
+	font-weight: 300;
+	padding: 16px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	/* min-width: 750 px; */
 }
 
 .footer-container {
-	padding: 8px;
+	padding: 16px;
 	width: 100%;
 	background-color:white;
 	color: black;
@@ -27,6 +38,8 @@ text {
 .nav-bar-container {
 	background-color: black;
 	color: white;
+	min-width: 750px;
+	position: relative;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
