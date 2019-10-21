@@ -4,6 +4,7 @@ body {
 	padding: 8 px;
 	font-family: "Open Sans", sans-serif;
 	background-color: white;
+	width: 100%;
 }
 
 text {
@@ -28,11 +29,13 @@ text {
 	/* min-width: 750 px; */
 }
 
-.footer-container {
+.footer-container {	
+	font-family: "Open Sans", sans-serif;
 	padding: 16px;
-	width: 100%;
-	background-color:white;
-	color: black;
+	background-color: black;
+	color:white;
+	position: relative;
+	/*width: 100%;*/
 }
 
 .nav-bar-container {
@@ -40,10 +43,35 @@ text {
 	color: white;
 	min-width: 750px;
 	position: relative;
+	width: 100%;
 }
 
 .main-content {
-	align-items: center;
+	display: flex;
+	width: 100%;
+}
+
+.main-content svg {
+	margin: 0 auto;
+}
+
+.bottom-link-format {
+	text-decoration: underline;
+	color: white;
+}
+
+.footer-element-right {
+	font-family: "Open Sans", sans-serif;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 16px;
+	
+	/* min-width: 750 px; */
+}
+
+.footer-element-right label {
+	margin-right: 18px;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
