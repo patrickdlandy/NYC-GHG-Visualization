@@ -65,13 +65,14 @@ text {
 	position: absolute;
 	right: 0;
 	top: 0;
-	padding: 16px;
+	
 	
 	/* min-width: 750 px; */
 }
 
 .footer-element-right label {
 	margin-right: 18px;
+	padding: 16px;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -122,4 +123,18 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+.about-icons {
+  /* display: inline-block; */
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.about-icons div {
+  /* display: inline-block; */
+  padding: 10px;
 }
