@@ -2,8 +2,6 @@
 
 Visualization of New York City Greenhouse Gas Inventory
 
-App Academy NYC August 12th Cohort Javascript Project 
-
 Patrick Landy
 
 Live Link: https://patrickdlandy.github.io/NYC-GHG-Visualization/
