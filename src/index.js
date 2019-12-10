@@ -2,8 +2,6 @@
 import "./styles/index.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
-
-  
   //everything is bundled into main.js by webpack and we just include a link to "main"
   
   //My D3 Code here:
@@ -63,6 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
   var dataset = d3.json('./data/diet_data.json').then(function (data) {
     return data;
   });
+
+  console.log(dataset);
 
   dataset.then(function (data) {
   // console.log(data)
@@ -188,8 +188,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
     //add dataset title to nav bar
-    var nav_title = root.data.name;
-    document.getElementById("nav-title").innerHTML = nav_title;
+    // var nav_title = root.data.name;
+    // document.getElementById("nav-title").innerHTML = nav_title;
+
+    //dropdown code here
+    var yearNavChildren = document.querySelectorAll(".nav-element-right a");
+    for (var x = 0; x < yearNavChildren.length; x++) {
+      yearNavChildren[x].onclick = function() {
+        var yearNav = this.parentNode.getElementsByClassName("year-navigator")[0];
+        if (yearNav.classList.contains("selected")) {
+          yearNav.classList.remove("selected");
+        } else {
+          yearNav.classList.add("selected");
+        }
+      }
+    }
+
   });
   
 });

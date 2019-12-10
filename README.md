@@ -2,8 +2,6 @@
 
 Visualization of New York City Greenhouse Gas Inventory
 
-App Academy NYC August 12th Cohort Javascript Project 
-
 Patrick Landy
 
 Live Link: https://patrickdlandy.github.io/NYC-GHG-Visualization/
@@ -18,7 +16,7 @@ This data visualization utilizes the D3 JavaScript Library to display greenhouse
 
 # Wireframes
 
-The app will consist of a single page with an interactive "Sun-Burst" plot in the center. The upper left will have the page title and the lower right will have my name and links to my personal pages. The upper right will have key metrics with labels and a slider bar or dropdown for year.
+The app consists of a single page with an interactive "Sun-Burst" plot in the center. The upper left will have the page title and the lower right will have my name and links to my personal pages. The upper right will have key metrics with labels and a slider bar or dropdown for year.
 
 If implemented, the bonus feature bar chart animation will be shown below the "Sun-Burst" plot.
 
@@ -59,6 +57,3 @@ Thursday, October 17th: continue MVP 1, begin MVP 2 (hover % effect)
 Friday, October 18th: complete MVP 2, begin MVP 3 (time dropdown)
 Weekend, October 19th-20th: Complete MVP 3 and do bonus features if time allows
 
-# Background Image Credit
-
-CC0 Public Domain License, Photo by George Hodan
