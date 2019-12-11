@@ -64,10 +64,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log(dataset);
 
-  dataset.then(function (data) {
-  // console.log(data)
+
   
-  //All code to do visualization goes inside of this callback
+  const renderSunBurst =  function(data) {
+  //might need to turn this back into a callback to get it to work
+
+
+
+  //All code to do visualization goes inside of this function
   
   //generate root 
   const root = partition(data);
@@ -190,20 +194,23 @@ document.addEventListener("DOMContentLoaded", () => {
     //add dataset title to nav bar
     // var nav_title = root.data.name;
     // document.getElementById("nav-title").innerHTML = nav_title;
+  };
 
-    //dropdown code here
-    var yearNavChildren = document.querySelectorAll(".nav-element-right a");
-    for (var x = 0; x < yearNavChildren.length; x++) {
-      yearNavChildren[x].onclick = function() {
-        var yearNav = this.parentNode.getElementsByClassName("year-navigator")[0];
-        if (yearNav.classList.contains("selected")) {
-          yearNav.classList.remove("selected");
-        } else {
-          yearNav.classList.add("selected");
-        }
+  //dropdown code here
+  var yearNavChildren = document.querySelectorAll(".nav-element-right a");
+  for (var x = 0; x < yearNavChildren.length; x++) {
+    yearNavChildren[x].onclick = function () {
+      var yearNav = this.parentNode.getElementsByClassName("year-navigator")[0];
+      if (yearNav.classList.contains("selected")) {
+        yearNav.classList.remove("selected");
+      } else {
+        yearNav.classList.add("selected");
       }
     }
+  }
 
-  });
+  //render sunBurst 
+
+  dataset.then(renderSunBurst);
   
 });
