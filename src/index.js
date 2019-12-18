@@ -54,15 +54,17 @@ document.addEventListener("DOMContentLoaded", () => {
     (root);
   }
 
-  
+  let localData = {};
 
   //I get my json data into an object in this function:
 
-  var dataset = d3.json('./data/diet_data.json').then(function (data) {
+  var dataset = d3.json('./data/data.json').then(function (data) {
+    localData = data;
+    // console.log(localData);
     return data;
   });
 
-  console.log(dataset);
+  // console.log(dataset); //this is a promise object
 
 
   
@@ -74,8 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
   //All code to do visualization goes inside of this function
   
   //generate root 
+  // console.log(data);
   const root = partition(data);
-  console.log(root);
+  // console.log(root);
   
   //set current attribute
   root.each(function (d) {
@@ -208,9 +211,14 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
-
+  const renderChart = function(year) {
+    console.log(localData.children[year - 2005]);
+    renderSunBurst(localData.children[year - 2005]);
+  }
   //render sunBurst 
 
-  dataset.then(renderSunBurst);
+  dataset.then(function() {
+    renderChart(2009);
+  });
   
 });

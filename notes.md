@@ -273,3 +273,7 @@ To do:
 -Reset opacity to exclude center
 -Set up CSS
           
+
+What problem am I trying to solve today?
+
+1). I need to get the data to display by year using the dropdown. Right now the data is loaded from a static .json file using d3.json(). The current setup creates a variable 'dataset' that points to a promise object returned by d3.json(). My progress so far is to use a .then() to store the full .json locally once it is loaded.  I wrote a render method to key into this local object according to the year of the data, and I called this method once the loading completed (within a .then).  Now I need to do something with click handlers on the dropdown menu to a) clear the previous chart and b) render according to the year.
