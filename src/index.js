@@ -201,24 +201,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //dropdown code here
   var yearNavChildren = document.querySelectorAll(".nav-element-right a");
+  console.log(yearNavChildren);
   for (var x = 0; x < yearNavChildren.length; x++) {
+    console.log(yearNavChildren[x]);
+    console.log(x);
     yearNavChildren[x].onclick = function () {
       var yearNav = this.parentNode.getElementsByClassName("year-navigator")[0];
-      if (yearNav.classList.contains("selected")) {
+      if (yearNav && yearNav.classList.contains("selected")) {
         yearNav.classList.remove("selected");
-      } else {
+      } else if (yearNav) {
         yearNav.classList.add("selected");
+      }
+      if (this.innerHTML !== "Year") {
+        console.log(this.innerHTML);
+        renderChart(parseInt(this.innerHTML), 10);
       }
     }
   }
+  const clearChart = function() {
+    d3.selectAll("svg > *").remove();
+  }
+
   const renderChart = function(year) {
+    clearChart();
     console.log(localData.children[year - 2005]);
     renderSunBurst(localData.children[year - 2005]);
   }
+
   //render sunBurst 
 
   dataset.then(function() {
-    renderChart(2009);
+    renderChart(2017);
   });
+  
   
 });
