@@ -211,8 +211,10 @@ document.addEventListener("DOMContentLoaded", () => {
         yearNav.classList.remove("selected");
       } else if (yearNav) {
         yearNav.classList.add("selected");
+      } else {
+        this.parentNode.parentNode.classList.remove("selected");
       }
-      if (this.innerHTML !== "Year") {
+      if (this.innerHTML !== "Year ⌄") {
         console.log(this.innerHTML);
         renderChart(parseInt(this.innerHTML), 10);
       }
