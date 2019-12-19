@@ -2,8 +2,6 @@
 import "./styles/index.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
-
-  
   //everything is bundled into main.js by webpack and we just include a link to "main"
   
   //My D3 Code here:
@@ -56,22 +54,31 @@ document.addEventListener("DOMContentLoaded", () => {
     (root);
   }
 
-  
+  let localData = {};
 
   //I get my json data into an object in this function:
 
-  var dataset = d3.json('./data/diet_data.json').then(function (data) {
+  var dataset = d3.json('./data/data.json').then(function (data) {
+    localData = data;
+    // console.log(localData);
     return data;
   });
 
-  dataset.then(function (data) {
-  // console.log(data)
+  // console.log(dataset); //this is a promise object
+
+
   
-  //All code to do visualization goes inside of this callback
+  const renderSunBurst =  function(data) {
+  //might need to turn this back into a callback to get it to work
+
+
+
+  //All code to do visualization goes inside of this function
   
   //generate root 
+  // console.log(data);
   const root = partition(data);
-  console.log(root);
+  // console.log(root);
   
   //set current attribute
   root.each(function (d) {
@@ -188,8 +195,46 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
     //add dataset title to nav bar
-    var nav_title = root.data.name;
-    document.getElementById("nav-title").innerHTML = nav_title;
+    // var nav_title = root.data.name;
+    // document.getElementById("nav-title").innerHTML = nav_title;
+  };
+
+  //dropdown code here
+  var yearNavChildren = document.querySelectorAll(".nav-element-right a");
+  console.log(yearNavChildren);
+  for (var x = 0; x < yearNavChildren.length; x++) {
+    console.log(yearNavChildren[x]);
+    console.log(x);
+    yearNavChildren[x].onclick = function () {
+      var yearNav = this.parentNode.getElementsByClassName("year-navigator")[0];
+      if (yearNav && yearNav.classList.contains("selected")) {
+        yearNav.classList.remove("selected");
+      } else if (yearNav) {
+        yearNav.classList.add("selected");
+      } else {
+        this.parentNode.parentNode.classList.remove("selected");
+      }
+      if (this.innerHTML !== "Year ⌄") {
+        console.log(this.innerHTML);
+        renderChart(parseInt(this.innerHTML), 10);
+      }
+    }
+  }
+  const clearChart = function() {
+    d3.selectAll("svg > *").remove();
+  }
+
+  const renderChart = function(year) {
+    clearChart();
+    console.log(localData.children[year - 2005]);
+    renderSunBurst(localData.children[year - 2005]);
+  }
+
+  //render sunBurst 
+
+  dataset.then(function() {
+    renderChart(2017);
   });
+  
   
 });

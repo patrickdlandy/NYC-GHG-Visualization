@@ -24,9 +24,29 @@ text {
 	font-weight: 300;
 	padding: 16px;
 	position: absolute;
-	right: 0;
+	min-width: 85px;
+	right: 25px;
 	top: 0;
 	/* min-width: 750 px; */
+}
+
+.year-navigator {
+	display: none;
+}
+#year {
+	text-decoration: none;
+	color: white;
+}
+
+.year-navigator.selected {
+	display: block;
+	background-color: black;
+	padding: 15px; 
+}
+
+.year-navigator.selected a {
+	text-decoration: none;
+	color:white;
 }
 
 .footer-container {	
