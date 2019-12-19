@@ -55,7 +55,6 @@ text {
 	background-color: black;
 	color:white;
 	position: relative;
-	/*width: 100%;*/
 }
 
 .nav-bar-container {
@@ -85,9 +84,6 @@ text {
 	position: absolute;
 	right: 0;
 	top: 0;
-	
-	
-	/* min-width: 750 px; */
 }
 
 .footer-element-right label {
@@ -96,18 +92,17 @@ text {
 }
 
 .about-icons {
-  /* display: inline-block; */
   height: 40px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-	color: white;
 }
 
 .about-icons div {
-  /* display: inline-block; */
 	padding: 10px;
-	
+	margin-right: 20px;
+	background-color: black;
+	color: white;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
