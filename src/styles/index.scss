@@ -94,6 +94,21 @@ text {
 	margin-right: 18px;
 }
 
+.about-icons {
+  /* display: inline-block; */
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+	color: white;
+}
+
+.about-icons div {
+  /* display: inline-block; */
+	padding: 10px;
+	
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
